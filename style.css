@@ -1,0 +1,18 @@
+.root {
+  position: absolute;
+  top: 1500px;
+  left: 30%;
+  height: 200px;
+  width: 500px;
+  background: coral;
+}
+
+.par, .fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.fixed {
+  left: 0;
+}
