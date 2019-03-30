@@ -1,11 +1,13 @@
-let root = document.querySelector('.root');
-let fixed = document.querySelector('.fixed');
-window.addEventListener('scroll', show);
-
-fixed.innerHTML = window.scrollY;
+window.addEventListener("scroll", show);
 
 function show() {
-  let par = document.querySelector('.par');
+  const boxes = document.getElementsByClassName("box");
 
-  par.innerHTML = window.scrollY;
+  for (let i = 0; i < boxes.length; i++) {
+    if (window.scrollY >= boxes[i].offsetTop - window.innerHeight / 1.5) {
+      boxes[i].style.background = "#444";
+    } else {
+      boxes[i].style.background = "#ccc";
+    }
+  }
 }
